@@ -14,7 +14,7 @@
         <DataTemplate x:Name="redViewTemplate" DataType="{x:Type viewmodels:RedViewModel}">
             <views:RedView DataContext="{Binding}" />
         </DataTemplate>
-        <DataTemplate x:Name="blueViewTemplate" DataType="{x:Type viewmodels:BlueViewModel}">
+        <DataTemplate x:Name="ChooseSemesterTemplate" DataType="{x:Type viewmodels:ChooseSemester}">
             <views:BlueView DataContext="{Binding}" />
         </DataTemplate>
     </Window.Resources>
@@ -34,11 +34,11 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Blue Button" x:Name="blueButton" Grid.Column="0" Click="blueButton_Clicked"/>
+                <Button Content="Blue Button" x:Name="blueButton" Grid.Column="0" Click="BlueButton_Clicked"/>
 
                 <Image Source="Images/logo.png" Grid.Column="1"/>
 
-                <Button Content="Red Button" x:Name="redButton" Grid.Column="2" Click="redButton_Clicked"/>
+                <Button Content="Red Button" x:Name="redButton" Grid.Column="2" Click="RedButton_Clicked"/>
             </Grid>
 
             <ContentControl Grid.Row="1" Content="{Binding}"/>

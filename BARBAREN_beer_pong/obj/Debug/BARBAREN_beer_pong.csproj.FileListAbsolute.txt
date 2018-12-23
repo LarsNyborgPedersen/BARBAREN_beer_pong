@@ -12,9 +12,9 @@ C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.csproj.CoreCompileInputs.cache
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.exe
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.pdb
-C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\BlueView.g.cs
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\RedView.g.cs
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\BlueView.baml
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\RedView.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\chooseSemester.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\chooseSemester.baml
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.csprojAssemblyReference.cache

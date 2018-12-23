@@ -24,15 +24,15 @@ namespace BARBAREN_beer_pong
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new BlueViewModel();
+            DataContext = new ChooseSemester();
         }
 
-        private void blueButton_Clicked(object sender, RoutedEventArgs e)
+        private void BlueButton_Clicked(object sender, RoutedEventArgs e)
         {
-            DataContext = new BlueViewModel();
+            DataContext = new ChooseSemester();
         }
 
-        private void redButton_Clicked(object sender, RoutedEventArgs e)
+        private void RedButton_Clicked(object sender, RoutedEventArgs e)
         {
             DataContext = new RedViewModel();
         }

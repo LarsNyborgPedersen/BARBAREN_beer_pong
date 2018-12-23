@@ -17,7 +17,7 @@ namespace BARBAREN_beer_pong_lib
         //
         // period path
         private string _period = null;
-        
+
         public GameController()
         {
             SetupEnvironment();
@@ -70,7 +70,7 @@ namespace BARBAREN_beer_pong_lib
                 if (line.Contains("\t"))
                 {
                     string[] selector = line.Split('\t');
-                    probe.Push(new ScoreProbe(selector[0],int.Parse(selector[1]),int.Parse(selector[2]),int.Parse(selector[3])));
+                    probe.Push(new ScoreProbe(selector[0], int.Parse(selector[1]), int.Parse(selector[2]), int.Parse(selector[3])));
                 }
             }
 
@@ -101,7 +101,7 @@ namespace BARBAREN_beer_pong_lib
                         probes[i + 1] = C;
                     }
                 }
-                Gamma:
+            Gamma:
 
                 if (!again)
                 {
@@ -117,7 +117,7 @@ namespace BARBAREN_beer_pong_lib
          */
         public void IncreseWins(string teamname)
         {
-            SetWins(teamname,GetWins(teamname)+1);
+            SetWins(teamname, GetWins(teamname) + 1);
         }
 
         /**
@@ -125,7 +125,7 @@ namespace BARBAREN_beer_pong_lib
          */
         public void IncreseLost(string teamname)
         {
-            SetLost(teamname,GetLost(teamname)+1);
+            SetLost(teamname, GetLost(teamname) + 1);
         }
 
         /*
@@ -133,7 +133,7 @@ namespace BARBAREN_beer_pong_lib
          */
         public void DecreseWins(string teamname)
         {
-            SetWins(teamname,GetWins(teamname)-1);
+            SetWins(teamname, GetWins(teamname) - 1);
         }
 
         /*
@@ -141,7 +141,7 @@ namespace BARBAREN_beer_pong_lib
          */
         public void DecreseLost(string teamname)
         {
-            SetLost(teamname,GetLost(teamname)-1);
+            SetLost(teamname, GetLost(teamname) - 1);
         }
 
         private string getScoreTarget(string teamname)
@@ -150,7 +150,7 @@ namespace BARBAREN_beer_pong_lib
             {
                 throw new Exception("SetWorkingPeriod not used");
             }
-            
+
             string targetfile = getWorkingTarget();
             string targetstring = null;
             foreach (string line in File.ReadLines(targetfile))
@@ -178,7 +178,7 @@ namespace BARBAREN_beer_pong_lib
             {
                 throw new Exception("SetWorkingPeriod not used");
             }
-            
+
             string targetfile = getWorkingTarget();
             Stack<string> stack = new Stack<string>();
             Boolean isadded = true;
@@ -225,7 +225,7 @@ namespace BARBAREN_beer_pong_lib
             string[] tokens = target.Split('\t');
             return tokens;
         }
-        
+
 
         /*
          * Set wins by team
@@ -244,7 +244,7 @@ namespace BARBAREN_beer_pong_lib
         public void SetLost(string teamname, int score)
         {
             string[] tokens = getScoreTagOf(teamname);
-            int rlx = int.Parse(tokens[1]) - score ;
+            int rlx = int.Parse(tokens[1]) - score;
             string rsl = teamname + "\t" + tokens[1] + "\t" + score + "\t" + rlx;
             ReplaceFileContext(teamname, rsl);
         }
@@ -272,7 +272,7 @@ namespace BARBAREN_beer_pong_lib
         {
             return int.Parse(getScoreTagOf(teamname)[3]);
         }
-        
+
         //
         // TEAM
         //
@@ -282,11 +282,11 @@ namespace BARBAREN_beer_pong_lib
          */
         public string[] GetTeamNames()
         {
-            string[] keys =  Directory.GetDirectories(_projectpath + Path.DirectorySeparatorChar+Team+Path.DirectorySeparatorChar).OrderBy(f=>f).ToArray();
+            string[] keys = Directory.GetDirectories(_projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar).OrderBy(f => f).ToArray();
             Stack<string> stack = new Stack<string>();
             foreach (string sleutel in keys)
             {
-                stack.Push(sleutel.Replace(_projectpath + Path.DirectorySeparatorChar+Team+Path.DirectorySeparatorChar,""));
+                stack.Push(sleutel.Replace(_projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar, ""));
             }
             return stack.ToArray();
         }
@@ -311,12 +311,12 @@ namespace BARBAREN_beer_pong_lib
         {
             if (!TeamExists(newname))
             {
-                Directory.CreateDirectory(_projectpath + Path.DirectorySeparatorChar+Team+Path.DirectorySeparatorChar + newname);
+                Directory.CreateDirectory(_projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar + newname);
                 Console.WriteLine("Team \"" + newname + "\" has been added to the game");
             }
             else
             {
-                Console.WriteLine("Command AddTeam("+newname+") ignored because it already exists");
+                Console.WriteLine("Command AddTeam(" + newname + ") ignored because it already exists");
             }
         }
 
@@ -327,13 +327,13 @@ namespace BARBAREN_beer_pong_lib
         {
             if (TeamExists(teamname))
             {
-                string swapfilename = _projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar + teamname + Path.DirectorySeparatorChar +"members.txt";
+                string swapfilename = _projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar + teamname + Path.DirectorySeparatorChar + "members.txt";
                 if (File.Exists(swapfilename))
                 {
                     return File.ReadAllLines(swapfilename);
                 }
             }
-            return new string[]{};
+            return new string[] { };
         }
 
         private bool TeamMemberExists(string teamname, string teammembername)
@@ -356,7 +356,7 @@ namespace BARBAREN_beer_pong_lib
             if (TeamMemberExists(teamname, teammembername))
             {
                 Stack<string> stack = new Stack<string>();
-                string swapfilename = _projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar + teamname + Path.DirectorySeparatorChar+"members.txt";
+                string swapfilename = _projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar + teamname + Path.DirectorySeparatorChar + "members.txt";
                 foreach (string context in File.ReadAllLines(swapfilename))
                 {
                     if (!context.Equals(teammembername))
@@ -365,7 +365,7 @@ namespace BARBAREN_beer_pong_lib
                     }
                 }
 
-                StreamWriter stream = new StreamWriter(File.Open(swapfilename,FileMode.Open));
+                StreamWriter stream = new StreamWriter(File.Open(swapfilename, FileMode.Open));
 
                 foreach (string item in stack)
                 {
@@ -373,11 +373,11 @@ namespace BARBAREN_beer_pong_lib
                 }
                 stream.Flush();
                 stream.Close();
-                Console.WriteLine("Removed "+teammembername+" of "+teamname);
+                Console.WriteLine("Removed " + teammembername + " of " + teamname);
             }
             else
             {
-                Console.WriteLine("Cannot remove "+teammembername+" because he/she does not exist");
+                Console.WriteLine("Cannot remove " + teammembername + " because he/she does not exist");
             }
         }
 
@@ -388,32 +388,32 @@ namespace BARBAREN_beer_pong_lib
         {
             if (TeamMemberExists(teamname, teammembername))
             {
-                Console.WriteLine(teammembername+" already exists in "+teamname);
+                Console.WriteLine(teammembername + " already exists in " + teamname);
             }
             else
             {
-                string swapfilename = _projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar + teamname + Path.DirectorySeparatorChar+"members.txt";
-                File.AppendAllText(swapfilename,teammembername);
-                Console.WriteLine(teammembername+" is now a part of "+teamname);
+                string swapfilename = _projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar + teamname + Path.DirectorySeparatorChar + "members.txt";
+                File.AppendAllText(swapfilename, teammembername);
+                Console.WriteLine(teammembername + " is now a part of " + teamname);
             }
         }
-        
+
         //
         // PERIOD
         //
-        
-        
-        
-        
+
+
+
+
         //
         // Gets a list of available working periods
         public string[] GetPeriodNames()
         {
-            string[] keys =  Directory.GetDirectories(_projectpath + Path.DirectorySeparatorChar+Period+Path.DirectorySeparatorChar).OrderBy(f=>f).ToArray();
+            string[] keys = Directory.GetDirectories(_projectpath + Path.DirectorySeparatorChar + Period + Path.DirectorySeparatorChar).OrderBy(f => f).ToArray();
             Stack<string> stack = new Stack<string>();
             foreach (string sleutel in keys)
             {
-                stack.Push(sleutel.Replace(_projectpath + Path.DirectorySeparatorChar +Period+Path.DirectorySeparatorChar,""));
+                stack.Push(sleutel.Replace(_projectpath + Path.DirectorySeparatorChar + Period + Path.DirectorySeparatorChar, ""));
             }
             return stack.ToArray();
         }
@@ -429,7 +429,7 @@ namespace BARBAREN_beer_pong_lib
         // Sets working period
         public void SetWorkingPeriod(string per)
         {
-            Console.WriteLine("Working period has been changed from "+_period + " to "+ per);
+            Console.WriteLine("Working period has been changed from " + _period + " to " + per);
             _period = per;
         }
 
@@ -454,21 +454,21 @@ namespace BARBAREN_beer_pong_lib
         {
             if (!PeriodExists(newname))
             {
-                Directory.CreateDirectory(_projectpath + Path.DirectorySeparatorChar+Period+Path.DirectorySeparatorChar + newname);
-                File.Create(_projectpath + Path.DirectorySeparatorChar +Period+Path.DirectorySeparatorChar + newname+Path.DirectorySeparatorChar+"scores.txt").Close();
+                Directory.CreateDirectory(_projectpath + Path.DirectorySeparatorChar + Period + Path.DirectorySeparatorChar + newname);
+                File.Create(_projectpath + Path.DirectorySeparatorChar + Period + Path.DirectorySeparatorChar + newname + Path.DirectorySeparatorChar + "scores.txt").Close();
                 Console.WriteLine("Period \"" + newname + "\" has been added to the game");
             }
             else
             {
-                Console.WriteLine("Command AddPeriod("+newname+") ignored because it already exists");
+                Console.WriteLine("Command AddPeriod(" + newname + ") ignored because it already exists");
             }
         }
-        
+
         //
         // DEFAULT
         //
-        
-        
+
+
         //
         // Checks if all directories and other dependencies are present 
         private void SetupEnvironment()
@@ -480,23 +480,23 @@ namespace BARBAREN_beer_pong_lib
                 if (!Directory.Exists(_projectpath))
                 {
                     Directory.CreateDirectory(_projectpath);
-                    Console.WriteLine("Game directory created: " + Path.DirectorySeparatorChar +_projectpath+Path.DirectorySeparatorChar+"");
+                    Console.WriteLine("Game directory created: " + Path.DirectorySeparatorChar + _projectpath + Path.DirectorySeparatorChar + "");
                 }
 
-                if (!Directory.Exists(_projectpath + Path.DirectorySeparatorChar +Period+ Path.DirectorySeparatorChar))
+                if (!Directory.Exists(_projectpath + Path.DirectorySeparatorChar + Period + Path.DirectorySeparatorChar))
                 {
-                    Directory.CreateDirectory(_projectpath + Path.DirectorySeparatorChar +Period + Path.DirectorySeparatorChar);
+                    Directory.CreateDirectory(_projectpath + Path.DirectorySeparatorChar + Period + Path.DirectorySeparatorChar);
                     Console.WriteLine("Period directory created inside gaming directory");
                 }
 
-                if (!Directory.Exists(_projectpath + Path.DirectorySeparatorChar +Team+ Path.DirectorySeparatorChar))
+                if (!Directory.Exists(_projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar))
                 {
-                    Directory.CreateDirectory(_projectpath + Path.DirectorySeparatorChar +Team+ Path.DirectorySeparatorChar);
+                    Directory.CreateDirectory(_projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar);
                     Console.WriteLine("Teams directory created inside gaming directory");
                 }
             }
         }
-        
+
     }
-    
+
 }
