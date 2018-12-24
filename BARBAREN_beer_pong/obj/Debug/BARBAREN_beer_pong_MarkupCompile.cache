@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\App.xaml
-3-1056982452
+8-1517655272
 
-14-2033071677
+20-561970056
 131569487696
-MainWindow.xaml;Views\chooseSemester.xaml;Views\RedView.xaml;
+MainWindow.xaml;Views\AddScore.xaml;Views\AddTeam.xaml;Views\chooseSemester.xaml;Views\CreateSemester.xaml;Views\MainMenu.xaml;Views\Rank.xaml;Views\RedView.xaml;
 
 True
 

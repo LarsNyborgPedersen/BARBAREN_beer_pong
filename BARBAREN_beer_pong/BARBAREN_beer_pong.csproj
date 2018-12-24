@@ -56,10 +56,30 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="GameController.cs" />
-    <Compile Include="ViewModels\ChooseSemester.cs" />
+    <Compile Include="ViewModels\AddScoreModel.cs" />
+    <Compile Include="ViewModels\AddTeamModel.cs" />
+    <Compile Include="ViewModels\ChooseSemesterModel.cs" />
+    <Compile Include="ViewModels\CreateSemesterModel.cs" />
+    <Compile Include="ViewModels\MainMenuModel.cs" />
+    <Compile Include="ViewModels\RankModel.cs" />
     <Compile Include="ViewModels\RedViewModel.cs" />
+    <Compile Include="Views\AddScore.xaml.cs">
+      <DependentUpon>AddScore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddTeam.xaml.cs">
+      <DependentUpon>AddTeam.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\chooseSemester.xaml.cs">
       <DependentUpon>chooseSemester.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateSemester.xaml.cs">
+      <DependentUpon>CreateSemester.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Rank.xaml.cs">
+      <DependentUpon>Rank.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RedView.xaml.cs">
       <DependentUpon>RedView.xaml</DependentUpon>
@@ -76,7 +96,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AddScore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddTeam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\chooseSemester.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateSemester.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Rank.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

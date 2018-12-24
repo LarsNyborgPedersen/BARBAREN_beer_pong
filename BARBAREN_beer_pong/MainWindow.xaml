@@ -11,11 +11,27 @@
         Title="MainWindow" Height="450" Width="800">
 
     <Window.Resources>
+        
+        <DataTemplate x:Name="AddScoreTemplate" DataType="{x:Type viewmodels:AddScoreModel}">
+            <views:AddScore DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="AddTeamTemplate" DataType="{x:Type viewmodels:AddTeamModel}">
+            <views:AddTeam DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="ChooseSemesterTemplate" DataType="{x:Type viewmodels:ChooseSemesterModel}">
+            <views:BlueView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="CreateSemesterTemplate" DataType="{x:Type viewmodels:CreateSemesterModel}">
+            <views:CreateSemester DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="MainMenuTemplate" DataType="{x:Type viewmodels:MainMenuModel}">
+            <views:MainMenu DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="RankTemplate" DataType="{x:Type viewmodels:RankModel}">
+            <views:Rank DataContext="{Binding}" />
+        </DataTemplate>
         <DataTemplate x:Name="redViewTemplate" DataType="{x:Type viewmodels:RedViewModel}">
             <views:RedView DataContext="{Binding}" />
-        </DataTemplate>
-        <DataTemplate x:Name="ChooseSemesterTemplate" DataType="{x:Type viewmodels:ChooseSemester}">
-            <views:BlueView DataContext="{Binding}" />
         </DataTemplate>
     </Window.Resources>
     

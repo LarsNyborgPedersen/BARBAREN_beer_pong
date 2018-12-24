@@ -20,7 +20,7 @@ namespace BARBAREN_beer_pong.Views
     /// <summary>
     /// Interaction logic for BlueView.xaml
     /// </summary>
-    public partial class BlueView : UserControl
+    public partial class BlueView : UserControl 
     {
         public BlueView()
         {
@@ -32,17 +32,13 @@ namespace BARBAREN_beer_pong.Views
             this.DataContext = periodNames;
         }
 
+        private void Create_Semester_Click(object sender, RoutedEventArgs e) => MainWindow.SetScreen("CreateSemester");
+
         private void Choose_Semester_Click(object sender, RoutedEventArgs e)
         {
             // setperiod
 
         }
         
-        private void Create_Semester_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.DataContext = new RedViewModel();
-
-        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BARBAREN_beer_pong.ViewModels;
+using BARBAREN_beer_pong.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,20 +22,55 @@ namespace BARBAREN_beer_pong
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow wn;
+
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new ChooseSemester();
+            DataContext = new ChooseSemesterModel();
+            wn = this;
         }
 
         private void BlueButton_Clicked(object sender, RoutedEventArgs e)
         {
-            DataContext = new ChooseSemester();
+            SetScreen("ChooseSemester");
         }
 
         private void RedButton_Clicked(object sender, RoutedEventArgs e)
         {
-            DataContext = new RedViewModel();
+            SetScreen("RedView");
+        }
+        
+        public static void SetScreen(String screenName)
+        {
+            if (screenName == "AddScore")
+            {
+                wn.DataContext = new AddScoreModel();
+            }
+            if (screenName == "AddTeam")
+            {
+                wn.DataContext = new AddTeamModel();
+            }
+            if (screenName == "ChooseSemester")
+            {
+                wn.DataContext = new ChooseSemesterModel();
+            }
+            if (screenName == "CreateSemester")
+            {
+                wn.DataContext = new CreateSemesterModel();
+            }
+            if (screenName == "MainMenuModel")
+            {
+                wn.DataContext = new MainMenuModel();
+            }
+            if (screenName == "Rank")
+            {
+                wn.DataContext = new RankModel();
+            }
+            if (screenName == "RedView")
+            {
+                wn.DataContext = new RedViewModel();
+            }
         }
     }
 }
