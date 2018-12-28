@@ -392,7 +392,20 @@ namespace BARBAREN_beer_pong_lib
             else
             {
                 string swapfilename = _projectpath + Path.DirectorySeparatorChar + Team + Path.DirectorySeparatorChar + teamname + Path.DirectorySeparatorChar+"members.txt";
-                File.AppendAllText(swapfilename,teammembername);
+                Stack<string> stack = new Stack<string>();
+                foreach (string context in File.ReadAllLines(swapfilename))
+                {
+                    stack.Push(context);
+                }
+                stack.Push(teammembername);
+                StreamWriter stream = new StreamWriter(File.Open(swapfilename,FileMode.Open));
+
+                foreach (string item in stack)
+                {
+                    stream.WriteLine(item);
+                }
+                stream.Flush();
+                stream.Close();
                 Console.WriteLine(teammembername+" is now a part of "+teamname);
             }
         }
