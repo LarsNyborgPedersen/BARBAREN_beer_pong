@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Mime;
 
 namespace BARBAREN_beer_pong_lib
 {
@@ -16,7 +17,7 @@ namespace BARBAREN_beer_pong_lib
         // period path
         private string _period;
         
-        private GameController()
+        public GameController()
         {
             SetupEnvironment();
         }
@@ -141,7 +142,7 @@ namespace BARBAREN_beer_pong_lib
             SetLost(teamname,GetLost(teamname)-1);
         }
 
-        private string GetScoreTarget(string teamname)
+        public string GetScoreTarget(string teamname)
         {
             if (GetWorkingPeriod() == null)
             {
@@ -164,12 +165,12 @@ namespace BARBAREN_beer_pong_lib
             return targetstring;
         }
 
-        private string GetWorkingTarget()
+        public string GetWorkingTarget()
         {
             return GetPeriodAttributePath("scores.txt");
         }
 
-        private void ReplaceFileContext(string teamname, string context)
+        public void ReplaceFileContext(string teamname, string context)
         {
             if (GetWorkingPeriod() == null)
             {
@@ -204,7 +205,7 @@ namespace BARBAREN_beer_pong_lib
             writer.Close();
         }
 
-        private string[] GetScoreTagOf(string teamname)
+        public string[] GetScoreTagOf(string teamname)
         {
             string target = GetScoreTarget(teamname);
             if (target == null)
@@ -288,7 +289,7 @@ namespace BARBAREN_beer_pong_lib
             return stack.ToArray();
         }
 
-        private bool TeamExists(string newname)
+        public bool TeamExists(string newname)
         {
             foreach (string name in GetTeamNames())
             {
@@ -310,12 +311,32 @@ namespace BARBAREN_beer_pong_lib
             {
                 Directory.CreateDirectory(GetTeamPath(newname));
                 File.Create(GetTeamMembersPath(newname)).Close();
+
+                
+                
                 Console.WriteLine("Team \"" + newname + "\" has been added to the game");
             }
             else
             {
                 Console.WriteLine("Command AddTeam("+newname+") ignored because it already exists");
             }
+        }
+
+        public void SetTeamIcon(string teamname, string path)
+        {
+            if (path.EndsWith(".jpg"))
+            {
+                File.Copy(path,GetTeamIcon(teamname));
+            }
+            else
+            {
+                throw new Exception("Only jpg supported");
+            }
+        }
+
+        public string GetTeamIcon(string teamname)
+        {
+            return GetTeamIconPath(teamname);
         }
 
         /*
@@ -333,7 +354,7 @@ namespace BARBAREN_beer_pong_lib
             return new string[]{};
         }
 
-        private bool TeamMemberExists(string teamname, string teammembername)
+        public bool TeamMemberExists(string teamname, string teammembername)
         {
             foreach (string member in GetTeamMembers(teamname))
             {
@@ -404,6 +425,11 @@ namespace BARBAREN_beer_pong_lib
                 stream.Close();
                 Console.WriteLine(teammembername+" is now a part of "+teamname);
             }
+        }
+        
+        public string GetTeamIconPath(string teamname)
+        {
+            return GetTeamPath(teamname) + Path.DirectorySeparatorChar + "team.jpg";
         }
 
         public string GetTeamMembersPath(string teamname)
@@ -505,7 +531,7 @@ namespace BARBAREN_beer_pong_lib
 
         //
         // Checks if period exists in the game
-        private bool PeriodExists(string newname)
+        public bool PeriodExists(string newname)
         {
             foreach (string name in GetPeriodNames())
             {
@@ -545,7 +571,7 @@ namespace BARBAREN_beer_pong_lib
         
         //
         // Checks if all directories and other dependencies are present 
-        private void SetupEnvironment()
+        public void SetupEnvironment()
         {
             String pathToDesktop = AppDomain.CurrentDomain.BaseDirectory;//Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             if (Directory.Exists(pathToDesktop))
