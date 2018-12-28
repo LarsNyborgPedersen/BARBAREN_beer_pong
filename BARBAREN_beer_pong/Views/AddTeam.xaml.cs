@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BARBAREN_beer_pong_lib;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,38 @@ namespace BARBAREN_beer_pong.Views
         public AddTeam()
         {
             InitializeComponent();
+        }
+
+        private void Done_Click(object sender, RoutedEventArgs e)
+        {
+            String teamName = this.teamName.Text;
+            String member1 = this.member1.Text;
+            String member2 = this.member2.Text;
+            String member3 = this.member3.Text;
+            GameController.GetInstance().AddTeam(teamName);
+            GameController.GetInstance().AddTeamMember(teamName, member1);
+            GameController.GetInstance().AddTeamMember(teamName, member2);
+            GameController.GetInstance().AddTeamMember(teamName, member3);
+            MainWindow.SetScreen("MainMenu");
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.teamName.Focus();
+        }
+
+        private void AddPicture_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = false;
+            fileDialog.Filter = "png|*.png|jpg|*.jpg*";
+            fileDialog.DefaultExt = ".jpg";
+            bool dialogStarted = (bool) fileDialog.ShowDialog();
+
+            if(dialogStarted)
+            {
+                String a = fileDialog.FileName;
+            }
         }
     }
 }

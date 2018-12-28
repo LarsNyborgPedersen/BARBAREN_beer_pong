@@ -28,22 +28,26 @@ namespace BARBAREN_beer_pong.Views
 
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-
-            
             try
             {
                 String semesterName = this.semesterName.Text;
-                GameController.GetInstance().AddPeriod(semesterName);
                 if (GameController.GetInstance().PeriodExists(semesterName))
                 {
                     MessageBox.Show("Period already exist, so no period was added");
                 }
+                GameController.GetInstance().AddPeriod(semesterName);
+                
                 MainWindow.SetScreen("ChooseSemester");
             }
             catch (System.ArgumentException)
             {
                 MessageBox.Show("Please don't use any special characters!");
             }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.semesterName.Focus();
         }
     }
 }

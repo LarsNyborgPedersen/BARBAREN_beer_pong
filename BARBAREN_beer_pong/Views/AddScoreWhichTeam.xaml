@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="BARBAREN_beer_pong.Views.AddScoreWhichTeam"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BARBAREN_beer_pong.Views"
+             mc:Ignorable="d" 
+             Loaded="Window_Loaded"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <Label Content="Skriv navnet på det team (Eller på en af medlemmerne), hvor du vil tilføje point:" Grid.Row="0"/>
+        <TextBox x:Name="searchTerm" Grid.Row="1"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Row="2" >
+            <ItemsControl ItemsSource="{Binding}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button x:Name="chooseTeam" Tag="{Binding}" Content="{Binding}" Click="Choose_Team_Click" Margin="2"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

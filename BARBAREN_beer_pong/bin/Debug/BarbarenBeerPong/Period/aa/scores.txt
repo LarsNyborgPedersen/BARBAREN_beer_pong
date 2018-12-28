@@ -1,0 +1,4 @@
+Team Pølsemad	17	50	-33
+Team buksevand	3	1	2
+team A	2	2	0
+fasdf	3	3	0

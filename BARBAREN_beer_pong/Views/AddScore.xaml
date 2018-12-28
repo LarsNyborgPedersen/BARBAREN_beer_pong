@@ -7,6 +7,33 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="teamNameSentence" HorizontalAlignment="Center" FontSize="30" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7"/>
+
+        <TextBlock Text="Vundet" HorizontalAlignment="Center" FontSize="20" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Text="Tabt" HorizontalAlignment="Center" FontSize="20" Grid.Row="1" Grid.Column="5"/>
+
+        <Button x:Name="wonDecrement" Content="-" Click="WonDecrement_Click" Grid.Row="2" Grid.Column="0"/>
+        <TextBox x:Name="gamesWon" TextChanged="GamesWon_TextChanged" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>
+        <Button x:Name="wonIncrement" Content="+" Click="WonIncrement_Click" Grid.Row="2" Grid.Column="2"/>
+
+        <Button x:Name="lostDecrement" Content="-" Click="LostDecrement_Click" Grid.Row="2" Grid.Column="4"/>
+        <TextBox x:Name="gamesLost" TextChanged="GamesLost_TextChanged"  Grid.Row="2" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>
+        <Button x:Name="lostIncrement" Content="+" Click="LostIncrement_Click" Grid.Row="2" Grid.Column="6"/>
+
     </Grid>
 </UserControl>

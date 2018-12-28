@@ -37,6 +37,9 @@ namespace BARBAREN_beer_pong.Views
         private void Choose_Semester_Click(object sender, RoutedEventArgs e)
         {
             // setperiod
+            string workingPeriod = (String) ((Button)sender).Tag;
+            GameController.GetInstance().SetWorkingPeriod(workingPeriod);
+            MainWindow.SetScreen("MainMenu");
 
         }
         

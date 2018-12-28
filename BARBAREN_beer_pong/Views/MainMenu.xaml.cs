@@ -24,5 +24,23 @@ namespace BARBAREN_beer_pong.Views
         {
             InitializeComponent();
         }
+
+        
+
+        private void AddTeam_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.SetScreen("AddTeam");
+        }
+
+        private void AddScore_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.SetScreen("AddScoreWhichTeam");
+        }
+
+        private void Rank_Click(object sender, RoutedEventArgs e)
+        {
+            RankWindow rankWindow = new RankWindow();
+            rankWindow.Show();
+        }
     }
 }

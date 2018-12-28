@@ -22,7 +22,8 @@ namespace BARBAREN_beer_pong
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static MainWindow wn;
+        private static MainWindow wn;
+        private static String currentWindow;
 
         public MainWindow()
         {
@@ -31,45 +32,53 @@ namespace BARBAREN_beer_pong
             wn = this;
         }
 
-        private void BlueButton_Clicked(object sender, RoutedEventArgs e)
+        private void Back_Button_Clicked(object sender, RoutedEventArgs e)
         {
-            SetScreen("ChooseSemester");
-        }
-
-        private void RedButton_Clicked(object sender, RoutedEventArgs e)
-        {
-            SetScreen("RedView");
+            if (currentWindow == "AddScoreWhichTeam" || currentWindow == "AddTeam")
+            {
+                SetScreen("MainMenu");
+            }
+            else if(currentWindow == "AddScore")
+            {
+                SetScreen("AddScoreWhichTeam");
+            }
+            else if (currentWindow == "MainMenu" || currentWindow == "CreateSemester")
+            {
+                SetScreen("ChooseSemester");
+            }
         }
         
         public static void SetScreen(String screenName)
         {
             if (screenName == "AddScore")
             {
+                currentWindow = screenName;
                 wn.DataContext = new AddScoreModel();
             }
-            if (screenName == "AddTeam")
+            if (screenName == "AddScoreWhichTeam")
             {
+                currentWindow = screenName;
+                wn.DataContext = new AddScoreWhichTeamModel();
+            }
+            else if (screenName == "AddTeam")
+            {
+                currentWindow = screenName;
                 wn.DataContext = new AddTeamModel();
             }
-            if (screenName == "ChooseSemester")
+            else if (screenName == "ChooseSemester")
             {
+                currentWindow = screenName;
                 wn.DataContext = new ChooseSemesterModel();
             }
-            if (screenName == "CreateSemester")
+            else if (screenName == "CreateSemester")
             {
+                currentWindow = screenName;
                 wn.DataContext = new CreateSemesterModel();
             }
-            if (screenName == "MainMenuModel")
+            else if (screenName == "MainMenu")
             {
+                currentWindow = screenName;
                 wn.DataContext = new MainMenuModel();
-            }
-            if (screenName == "Rank")
-            {
-                wn.DataContext = new RankModel();
-            }
-            if (screenName == "RedView")
-            {
-                wn.DataContext = new RedViewModel();
             }
         }
     }

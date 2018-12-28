@@ -7,6 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <Button x:Name="addTeam" Grid.Row="0" Content="Tilføj team" Click="AddTeam_Click" />
+        <Button x:Name="addScore" Grid.Row="1" Content="Ændre Score" Click="AddScore_Click" />
+        <Button x:Name="Rank" Grid.Row="2" Content="Se top 10" Click="Rank_Click" />
     </Grid>
 </UserControl>

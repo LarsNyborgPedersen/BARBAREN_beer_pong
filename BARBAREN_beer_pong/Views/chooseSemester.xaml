@@ -6,16 +6,24 @@
              xmlns:local="clr-namespace:BARBAREN_beer_pong.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Blue">
-        <!--create semester button-->
-        <Button x:Name="createSemester" Content="Create Semester" Click="Create_Semester_Click" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
         <!--Buttons for semesters-->
-        <ItemsControl ItemsSource="{Binding}">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Button Tag="{Binding}" Content="{Binding}" Click="Choose_Semester_Click" Margin="2"/>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Row="0" >
+            <ItemsControl ItemsSource="{Binding}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button x:Name="chooseSemester" Tag="{Binding}" Content="{Binding}" Click="Choose_Semester_Click" Margin="2"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+        <!--create semester button-->
+        <Button x:Name="createSemester" Content="Tilføj nyt semester" Click="Create_Semester_Click" Grid.Row="1"/>
+        
     </Grid>
 </UserControl>

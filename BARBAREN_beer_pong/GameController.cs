@@ -291,7 +291,7 @@ namespace BARBAREN_beer_pong_lib
             return stack.ToArray();
         }
 
-        private bool TeamExists(string newname)
+        public bool TeamExists(string newname)
         {
             foreach (string name in GetTeamNames())
             {
@@ -336,7 +336,7 @@ namespace BARBAREN_beer_pong_lib
             return new string[] { };
         }
 
-        private bool TeamMemberExists(string teamname, string teammembername)
+        public bool TeamMemberExists(string teamname, string teammembername)
         {
             foreach (string member in GetTeamMembers(teamname))
             {
@@ -435,7 +435,7 @@ namespace BARBAREN_beer_pong_lib
 
         //
         // Checks if period exists in the game
-        private bool PeriodExists(string newname)
+        public bool PeriodExists(string newname)
         {
             foreach (string name in GetPeriodNames())
             {

@@ -11,7 +11,10 @@
         Title="MainWindow" Height="450" Width="800">
 
     <Window.Resources>
-        
+
+        <DataTemplate x:Name="AddScoreWhichTeamTemplate" DataType="{x:Type viewmodels:AddScoreWhichTeamModel}">
+            <views:AddScoreWhichTeam DataContext="{Binding}" />
+        </DataTemplate>
         <DataTemplate x:Name="AddScoreTemplate" DataType="{x:Type viewmodels:AddScoreModel}">
             <views:AddScore DataContext="{Binding}" />
         </DataTemplate>
@@ -26,12 +29,6 @@
         </DataTemplate>
         <DataTemplate x:Name="MainMenuTemplate" DataType="{x:Type viewmodels:MainMenuModel}">
             <views:MainMenu DataContext="{Binding}" />
-        </DataTemplate>
-        <DataTemplate x:Name="RankTemplate" DataType="{x:Type viewmodels:RankModel}">
-            <views:Rank DataContext="{Binding}" />
-        </DataTemplate>
-        <DataTemplate x:Name="redViewTemplate" DataType="{x:Type viewmodels:RedViewModel}">
-            <views:RedView DataContext="{Binding}" />
         </DataTemplate>
     </Window.Resources>
     
@@ -50,11 +47,9 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Blue Button" x:Name="blueButton" Grid.Column="0" Click="BlueButton_Clicked"/>
+                <Button Content="Tilbage knap" x:Name="backButton" Grid.Column="0" Click="Back_Button_Clicked"/>
 
                 <Image Source="Images/logo.png" Grid.Column="1"/>
-
-                <Button Content="Red Button" x:Name="redButton" Grid.Column="2" Click="RedButton_Clicked"/>
             </Grid>
 
             <ContentControl Grid.Row="1" Content="{Binding}"/>
