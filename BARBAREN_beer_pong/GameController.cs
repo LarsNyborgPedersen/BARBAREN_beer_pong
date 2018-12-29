@@ -319,8 +319,14 @@ namespace BARBAREN_beer_pong_lib
                 Directory.CreateDirectory(GetTeamPath(newname));
                 File.Create(GetTeamMembersPath(newname)).Close();
 
-                
-                
+                string[] files = Directory.GetFiles(GetImageDirectory());
+                if (files.Length != 0)
+                {
+                    Random rnd = new Random();
+                    int random = rnd.Next(0, files.Length);
+                    SetTeamIcon(newname,files[random]);
+                }
+
                 Console.WriteLine("Team \"" + newname + "\" has been added to the game");
             }
             else
@@ -472,6 +478,11 @@ namespace BARBAREN_beer_pong_lib
         {
             return GetPeriodAttributePath(GetWorkingPeriod(), attribute);
         }
+
+        public string GetImageDirectory()
+        {
+            return GetPeriodPath(".pictures");
+        }
         
 
 
@@ -518,7 +529,10 @@ namespace BARBAREN_beer_pong_lib
             Stack<string> stack = new Stack<string>();
             foreach (string sleutel in keys)
             {
-                stack.Push(sleutel.Replace(GetBase() + Path.DirectorySeparatorChar,""));
+                if (sleutel!=GetImageDirectory())
+                {
+                    stack.Push(sleutel.Replace(GetBase() + Path.DirectorySeparatorChar, ""));
+                }
             }
             return stack.ToArray();
         }
@@ -590,6 +604,7 @@ namespace BARBAREN_beer_pong_lib
                 {
                     Directory.CreateDirectory(_projectpath);
                     Console.WriteLine("Game directory created: " + Path.DirectorySeparatorChar +_projectpath+Path.DirectorySeparatorChar+"");
+                    Directory.CreateDirectory(GetImageDirectory());
                 }
             }
         }
