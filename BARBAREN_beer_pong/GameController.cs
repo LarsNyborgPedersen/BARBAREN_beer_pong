@@ -619,7 +619,12 @@ namespace BARBAREN_beer_pong_lib
                 {
                     Directory.CreateDirectory(_projectpath);
                     Console.WriteLine("Game directory created: " + Path.DirectorySeparatorChar +_projectpath+Path.DirectorySeparatorChar+"");
+                }
+
+                if (!Directory.Exists(GetImageDirectory()))
+                {
                     Directory.CreateDirectory(GetImageDirectory());
+                    Console.WriteLine("Image directory created at " + GetImageDirectory());
                 }
             }
         }
