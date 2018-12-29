@@ -56,8 +56,13 @@ namespace BARBAREN_beer_pong_lib
             }
         }
 
+        public int GetScoresCount()
+        {
+            return GetScores().Length;
+        }
+
         /**
-         * Returns the list of scores from the current period, sorted by socre
+         * Returns the list of scores from the current period, sorted by score
          */
         public ScoreProbe[] GetScores()
         {
@@ -296,6 +301,11 @@ namespace BARBAREN_beer_pong_lib
             return stack.ToArray();
         }
 
+        public int GetTeamsCount()
+        {
+            return GetTeamNames().Length;
+        }
+
         public bool TeamExists(string newname)
         {
             foreach (string name in GetTeamNames())
@@ -365,6 +375,11 @@ namespace BARBAREN_beer_pong_lib
                 }
             }
             return new string[]{};
+        }
+
+        public int GetTeamMembersCount(string teamname)
+        {
+            return GetTeamMembers(teamname).Length;
         }
 
         public bool TeamMemberExists(string teamname, string teammembername)
