@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Mime;
 
 namespace BARBAREN_beer_pong_lib
 {
@@ -72,6 +71,10 @@ namespace BARBAREN_beer_pong_lib
                     probe.Push(new ScoreProbe(selector[0],int.Parse(selector[1]),int.Parse(selector[2]),int.Parse(selector[3])));
                 }
             }
+            
+            //
+            // PRIMAIRY SELECTION: On score
+            //
 
             ScoreProbe[] probes = probe.ToArray();
             while (true)
@@ -106,6 +109,10 @@ namespace BARBAREN_beer_pong_lib
                     break;
                 }
             }
+            
+            //
+            // SECONDAIRY SELECTION: ON GAMES PLAYED
+            //
 
             return probes;
         }
@@ -473,26 +480,28 @@ namespace BARBAREN_beer_pong_lib
             string[] target = GetPeriodNames();
             while (true)
             {
-                var veranderd = false;
+                bool slaover = true;
                 for (int i = 0; i < target.Length; i++)
                 {
-                    DateTime a = Directory.GetCreationTime(GetPeriodPath(target[i]));
-                    DateTime b;
+                    string a = target[i];
                     if ((i + 1) < target.Length)
                     {
-                        b = Directory.GetCreationTime(GetPeriodPath(target[i]));
-                        if (a.CompareTo(b) < 0)
+                        string b = target[i + 1];
+                        string pathA = GetPeriodPath(a);
+                        string pathB = GetPeriodPath(b);
+                        DateTime dtA = Directory.GetCreationTimeUtc(pathA);
+                        DateTime dtB = Directory.GetCreationTimeUtc(pathB);
+                        if (dtB.ToFileTimeUtc() > dtA.ToFileTimeUtc())
                         {
-                            String c = target[i];
-                            String d = target[i + 1];
-                            target[i] = d;
+                            slaover = false;
+                            string c = target[i];
+                            target[i] = target[i + 1];
                             target[i + 1] = c;
-                            veranderd = true;
                         }
                     }
-                }
 
-                if (!veranderd)
+                }
+                if (slaover)
                 {
                     break;
                 }
