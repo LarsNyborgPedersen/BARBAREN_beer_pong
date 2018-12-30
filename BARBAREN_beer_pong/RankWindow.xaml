@@ -7,41 +7,15 @@
         mc:Ignorable="d"
         KeyDown="Window_KeyDown"
         Title="RankWindow" Height="450" Width="800">
+
     
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
 
-        <Label Content="Top 10" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="40"/>
-        
-        <!--Here comes all the grids with one team in each-->
-        <Grid Grid.Row="1" Grid.Column="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="5*"/>
-            </Grid.ColumnDefinitions>
-            
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" >
+        <StackPanel x:Name="myStackPanel">
+            <Label Content="Bedste teams" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="100"/>
+            <WrapPanel x:Name="wrapPanel" Height="auto"/>
 
-            <Image Source="Images/1.png" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0"/>
-            <TextBlock x:Name="team1Name" FontSize="20" Grid.Row="0" Grid.Column="1"/>
-            <TextBlock x:Name="team1Score" FontSize="20" Grid.Row="1" Grid.Column="1"/>
-            <Image Source="Images/goats.jpg" Stretch="Fill" Grid.Row="0" Grid.RowSpan="2" Grid.Column="2"/>
-        </Grid>
 
-    </Grid>
+        </StackPanel>
+    </ScrollViewer>
 </Window>

@@ -27,4 +27,5 @@ C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.pdb
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\AddScore.g.cs
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\AddScore.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.RandomPictures.resources
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.csprojAssemblyReference.cache

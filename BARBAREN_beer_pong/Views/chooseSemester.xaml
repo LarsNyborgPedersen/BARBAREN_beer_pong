@@ -17,13 +17,13 @@
             <ItemsControl ItemsSource="{Binding}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Button x:Name="chooseSemester" Tag="{Binding}" Content="{Binding}" Click="Choose_Semester_Click" Margin="2"/>
+                        <Button x:Name="chooseSemester" FontSize="20" Tag="{Binding}" Content="{Binding}" Click="Choose_Semester_Click"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
         <!--create semester button-->
-        <Button x:Name="createSemester" Content="Tilføj nyt semester" Click="Create_Semester_Click" Grid.Row="1"/>
+        <Button x:Name="createSemester" Content="Tilføj nyt semester" FontSize="20" Click="Create_Semester_Click" Grid.Row="1"/>
         
     </Grid>
 </UserControl>

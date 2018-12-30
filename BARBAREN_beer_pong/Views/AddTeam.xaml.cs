@@ -22,6 +22,8 @@ namespace BARBAREN_beer_pong.Views
     /// </summary>
     public partial class AddTeam : UserControl
     {
+        private static String picturePath;
+
         public AddTeam()
         {
             InitializeComponent();
@@ -33,10 +35,17 @@ namespace BARBAREN_beer_pong.Views
             String member1 = this.member1.Text;
             String member2 = this.member2.Text;
             String member3 = this.member3.Text;
+
             GameController.GetInstance().AddTeam(teamName);
             GameController.GetInstance().AddTeamMember(teamName, member1);
             GameController.GetInstance().AddTeamMember(teamName, member2);
             GameController.GetInstance().AddTeamMember(teamName, member3);
+            if (picturePath != null)
+            {
+                GameController.GetInstance().SetTeamIcon(teamName, picturePath);
+                picturePath = null;
+            }
+
             MainWindow.SetScreen("MainMenu");
         }
 
@@ -55,7 +64,7 @@ namespace BARBAREN_beer_pong.Views
 
             if(dialogStarted)
             {
-                String a = fileDialog.FileName;
+                picturePath = fileDialog.FileName;
             }
         }
     }

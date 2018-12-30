@@ -14,13 +14,13 @@
             <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
 
-        <Label Content="Skriv navnet på det team (Eller på en af medlemmerne), hvor du vil tilføje point:" Grid.Row="0"/>
-        <TextBox x:Name="searchTerm" Grid.Row="1"/>
+        <Label Content="Skriv navnet på det team (Eller på en af medlemmerne), hvor du vil tilføje point:" FontSize="20" HorizontalAlignment="Center" Grid.Row="0"/>
+        <TextBox x:Name="searchTerm" TextChanged="SearchTerm_TextChanged" Grid.Row="1"/>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Row="2" >
             <ItemsControl ItemsSource="{Binding}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Button x:Name="chooseTeam" Tag="{Binding}" Content="{Binding}" Click="Choose_Team_Click" Margin="2"/>
+                        <Button x:Name="chooseTeam" Tag="{Binding}" FontSize="20" Content="{Binding}" Click="Choose_Team_Click" Margin="2"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

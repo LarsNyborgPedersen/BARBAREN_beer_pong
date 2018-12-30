@@ -25,9 +25,10 @@ namespace BARBAREN_beer_pong.Views
         public BlueView()
         {
             InitializeComponent();
-           
-            String[] periodNames = GameController.GetInstance().GetPeriodNames();
-            
+
+            String[] periodNames = GameController.GetInstance().GetPeriodsByDate();
+
+
 
             this.DataContext = periodNames;
         }

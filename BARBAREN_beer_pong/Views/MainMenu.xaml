@@ -12,9 +12,9 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        
-        <Button x:Name="addTeam" Grid.Row="0" Content="Tilføj team" Click="AddTeam_Click" />
-        <Button x:Name="addScore" Grid.Row="1" Content="Ændre Score" Click="AddScore_Click" />
-        <Button x:Name="Rank" Grid.Row="2" Content="Se top 10" Click="Rank_Click" />
+
+        <Button x:Name="addTeam" FontSize="20" Grid.Row="0" Content="Tilføj team" Click="AddTeam_Click" />
+        <Button x:Name="addScore" FontSize="20" Grid.Row="1" Content="Ændre Score" Click="AddScore_Click" />
+        <Button x:Name="Rank" FontSize="20" Grid.Row="2" Content="Se top 10" Click="Rank_Click" />
     </Grid>
 </UserControl>

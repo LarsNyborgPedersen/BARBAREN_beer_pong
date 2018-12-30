@@ -31,7 +31,7 @@
             <views:MainMenu DataContext="{Binding}" />
         </DataTemplate>
     </Window.Resources>
-    
+
     <Border Padding="10">
         <Grid >
             <Grid.RowDefinitions>
@@ -47,9 +47,9 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Tilbage knap" x:Name="backButton" Grid.Column="0" Click="Back_Button_Clicked"/>
+                <Image Source="Images/backButton.png" x:Name="backButton" Grid.Column="0" MouseDown="Back_Button_Clicked" />
 
-                <Image Source="Images/logo.png" Grid.Column="1"/>
+                <Image Source="Images/logo2.png" Grid.Column="1" Margin="0, 0, 0, 6"/>
             </Grid>
 
             <ContentControl Grid.Row="1" Content="{Binding}"/>

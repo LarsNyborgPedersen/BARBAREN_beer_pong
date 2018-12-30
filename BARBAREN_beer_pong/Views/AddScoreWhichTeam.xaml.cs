@@ -43,5 +43,11 @@ namespace BARBAREN_beer_pong.Views
         {
             this.searchTerm.Focus();
         }
+
+        private void SearchTerm_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            String searchText = ((TextBox)sender).Text;
+            DataContext = GameController.GetInstance().search(searchText);
+        }
     }
 }
