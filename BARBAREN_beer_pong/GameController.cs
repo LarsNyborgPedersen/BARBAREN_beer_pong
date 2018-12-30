@@ -95,6 +95,9 @@ namespace BARBAREN_beer_pong_lib
          */
         public ScoreProbe[] GetScores()
         {
+            
+            //
+            // Load data from file
             string alpha = GetWorkingTarget();
             Stack<ScoreProbe> probe = new Stack<ScoreProbe>();
             foreach (string line in File.ReadLines(alpha))
@@ -103,6 +106,25 @@ namespace BARBAREN_beer_pong_lib
                 {
                     string[] selector = line.Split('\t');
                     probe.Push(new ScoreProbe(selector[0],int.Parse(selector[1]),int.Parse(selector[2]),int.Parse(selector[3])));
+                }
+            }
+            
+            //
+            // Populate with 0 scores
+            foreach (string teamName in GetTeamNames())
+            {
+                bool zoek = true;
+                foreach (ScoreProbe VARIABLE in probe)
+                {
+                    if (teamName.Equals(VARIABLE.Teamname))
+                    {
+                        zoek = false;
+                    }
+                }
+
+                if (zoek)
+                {
+                    probe.Push(new ScoreProbe(teamName,0,0,0));
                 }
             }
             
@@ -146,8 +168,85 @@ namespace BARBAREN_beer_pong_lib
             
             //
             // SECONDAIRY SELECTION: ON GAMES PLAYED
-            //
+            while (true)
+            {
+                bool again = false;
+                for (int i = 0; i < probes.Length; i++)
+                {
+                    ScoreProbe a = probes[i];
+                    ScoreProbe b = null;
+                    if ((i + 1) < probes.Length)
+                    {
+                        b = probes[i + 1];
+                    }
 
+                    if (b == null)
+                    {
+                        goto Gamma;
+                    }
+
+                    if (b.Score == a.Score)
+                    {
+                        if ((b.Won+b.Lost) > (a.Won+a.Lost))
+                        {
+                            again = true;
+                            ScoreProbe c = probes[i];
+                            probes[i] = probes[i + 1];
+                            probes[i + 1] = c;
+                        }
+                    }
+                }
+                Gamma:
+
+                if (!again)
+                {
+                    break;
+                }
+            }
+            
+            //
+            // TERTAIRY SELECTION: ON ALPHABET
+            while (true)
+            {
+                bool again = false;
+                for (int i = 0; i < probes.Length; i++)
+                {
+                    ScoreProbe a = probes[i];
+                    ScoreProbe b = null;
+                    if ((i + 1) < probes.Length)
+                    {
+                        b = probes[i + 1];
+                    }
+
+                    if (b == null)
+                    {
+                        goto Gamma;
+                    }
+
+                    if (b.Score == a.Score)
+                    {
+                        if ((b.Won+b.Lost) == (a.Won+a.Lost))
+                        {
+                            string[] gamma = new string[] {a.Teamname,b.Teamname};
+                            gamma = gamma.OrderBy(f => f).ToArray();
+                            if (gamma[0] != a.Teamname)
+                            {
+                                again = true;
+                                ScoreProbe c = probes[i];
+                                probes[i] = probes[i + 1];
+                                probes[i + 1] = c;
+                            }
+                        }
+                    }
+                }
+                Gamma:
+
+                if (!again)
+                {
+                    break;
+                }
+            }
+            
             return probes;
         }
 
