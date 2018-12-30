@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Resources;
 
 namespace BARBAREN_beer_pong_lib
 {
@@ -625,7 +627,34 @@ namespace BARBAREN_beer_pong_lib
                 {
                     Directory.CreateDirectory(GetImageDirectory());
                     Console.WriteLine("Image directory created at " + GetImageDirectory());
+
+                    ResourceManager rm = RandomPictures.ResourceManager;
+                    int c = 0;
+                    Console.WriteLine("Populating sample images");
+                    while (true)
+                    {
+                        try
+                        {
+                            object obx = rm.GetObject("image" + c);
+                            if (obx == null)
+                            {
+                                break;
+                            }
+                            System.Drawing.Bitmap bit = (System.Drawing.Bitmap)obx;
+                            bit.Save(GetImageDirectory() + Path.DirectorySeparatorChar + "image"+c+".jpg",ImageFormat.Jpeg);
+                            c++;
+                            Console.WriteLine("Adding sample image #"+c);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.ToString());
+                            break;
+                        }
+                    }
+                    rm.ReleaseAllResources();
                 }
+                
+                
             }
         }
         
