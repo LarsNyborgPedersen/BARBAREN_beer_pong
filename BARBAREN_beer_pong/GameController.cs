@@ -38,6 +38,33 @@ namespace BARBAREN_beer_pong_lib
             return _instance;
         }
 
+        public string[] search(string param)
+        {
+            Stack<string> stck = new Stack<string>();
+            foreach (string teamName in GetTeamNames())
+            {
+                if (!stck.Contains(teamName))
+                {
+                    if (teamName.Contains(param))
+                    {
+                        stck.Push(teamName);
+                    }
+                    else
+                    {
+                        foreach (string teamMember in GetTeamMembers(teamName))
+                        {
+                            if (teamMember.Contains(param))
+                            {
+                                stck.Push(teamName);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            return stck.ToArray();
+        }
+
         //
         // ADD SCORE
         //
