@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Resources;
 
 namespace BARBAREN_beer_pong_lib
@@ -45,7 +46,7 @@ namespace BARBAREN_beer_pong_lib
             {
                 if (!stck.Contains(teamName))
                 {
-                    if (teamName.Contains(param))
+                    if (teamName.ToUpper().Contains(param.ToUpper()))
                     {
                         stck.Push(teamName);
                     }
@@ -53,7 +54,7 @@ namespace BARBAREN_beer_pong_lib
                     {
                         foreach (string teamMember in GetTeamMembers(teamName))
                         {
-                            if (teamMember.Contains(param))
+                            if (teamMember.ToUpper().Contains(param.ToUpper()))
                             {
                                 stck.Push(teamName);
                                 break;
@@ -758,8 +759,12 @@ namespace BARBAREN_beer_pong_lib
                 {
                     Directory.CreateDirectory(GetImageDirectory());
                     Console.WriteLine("Image directory created at " + GetImageDirectory());
-
-                    ResourceManager rm = RandomPictures.ResourceManager;
+                    string nameofassembly = null;
+                    foreach (string gamma in Assembly.GetExecutingAssembly().GetManifestResourceNames())
+                    {
+                        nameofassembly = gamma;
+                    }
+                    ResourceManager rm = new ResourceManager(nameofassembly.Replace(".resources",""),Assembly.GetExecutingAssembly());
                     int c = 0;
                     Console.WriteLine("Populating sample images");
                     while (true)
