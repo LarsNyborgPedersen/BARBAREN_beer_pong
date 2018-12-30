@@ -349,14 +349,11 @@ namespace BARBAREN_beer_pong_lib
 
         public void SetTeamIcon(string teamname, string path)
         {
-            if (path.EndsWith(".jpg"))
+            if (File.Exists(GetTeamIcon(teamname)))
             {
-                File.Copy(path,GetTeamIcon(teamname));
+                File.Delete(GetTeamIcon(teamname));
             }
-            else
-            {
-                throw new Exception("Only jpg supported");
-            }
+            File.Copy(path,GetTeamIcon(teamname));
         }
 
         public string GetTeamIcon(string teamname)
