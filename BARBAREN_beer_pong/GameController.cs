@@ -244,6 +244,10 @@ namespace BARBAREN_beer_pong_lib
          */
         public void SetWins(string teamname, int score)
         {
+            if (score < 0)
+            {
+                score = 0;
+            }
             string[] tokens = GetScoreTagOf(teamname);
             int rlx = score - int.Parse(tokens[2]);
             string rsl = teamname + "\t" + score + "\t" + tokens[2] + "\t" + rlx;
@@ -255,6 +259,10 @@ namespace BARBAREN_beer_pong_lib
          */
         public void SetLost(string teamname, int score)
         {
+            if (score < 0)
+            {
+                score = 0;
+            }
             string[] tokens = GetScoreTagOf(teamname);
             int rlx = int.Parse(tokens[1]) - score ;
             string rsl = teamname + "\t" + tokens[1] + "\t" + score + "\t" + rlx;
