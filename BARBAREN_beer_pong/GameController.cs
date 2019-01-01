@@ -82,18 +82,30 @@ namespace BARBAREN_beer_pong_lib
                 {
                     string nme = s+" | (";
                     string[] nx = GetTeamMembers(s);
-                    for (int i = 0; i < nx.Length; i++)
+                    if (nx.Length == 0)
                     {
-                        nme += nx[i];
-                        if ((i + 1) < nx.Length)
+                        nme += "Der er ikke registreret nogle medlemmer i dette team)";
+                    }
+                    else
+                    {
+                        for (int i = 0; i < nx.Length; i++)
                         {
-                            nme += ", ";
-                        }
-                        else
-                        {
-                            nme += ")";
+                            nme += nx[i];
+
+                            if ((i + 1) < nx.Length)
+                            {
+                                if (nx[i].Length != 0)
+                                {
+                                    nme += ", ";
+                                }
+                            }
+                            else
+                            {
+                                nme += ")";
+                            }
                         }
                     }
+
                     bffr.Push(nme);
                 }
                 return bffr.ToArray();
