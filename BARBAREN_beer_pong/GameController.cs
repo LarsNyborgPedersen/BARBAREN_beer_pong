@@ -40,6 +40,11 @@ namespace BARBAREN_beer_pong_lib
             return _instance;
         }
 
+        public string StripTeamName(string raw)
+        {
+            return raw.Substring(0,raw.IndexOf(" | "));
+        }
+
         public string[] search(string param)
         {
             return search(param, false);
@@ -75,7 +80,7 @@ namespace BARBAREN_beer_pong_lib
                 Stack<string> bffr = new Stack<string>();
                 foreach (string s in stck)
                 {
-                    string nme = " | (";
+                    string nme = s+" | (";
                     string[] nx = GetTeamMembers(s);
                     for (int i = 0; i < nx.Length; i++)
                     {
