@@ -793,7 +793,7 @@ namespace BARBAREN_beer_pong_lib
 
         public bool CheckSyntax(string name)
         {
-            return name.IndexOfAny(Path.GetInvalidFileNameChars()) == 0 && name.IndexOfAny(Path.GetInvalidPathChars()) == 0;
+            return name.IndexOfAny(Path.GetInvalidFileNameChars()) == -1 && name.IndexOfAny(Path.GetInvalidPathChars()) == -1;
         }
 
         public Bitmap GetCoreImage(string identifier)
