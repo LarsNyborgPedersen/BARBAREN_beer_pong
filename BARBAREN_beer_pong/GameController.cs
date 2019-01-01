@@ -742,6 +742,11 @@ namespace BARBAREN_beer_pong_lib
             return _projectpath;
         }
 
+        public bool CheckSyntax(string name)
+        {
+            return name.IndexOfAny(Path.GetInvalidFileNameChars()) == 0 && name.IndexOfAny(Path.GetInvalidPathChars()) == 0;
+        }
+
         public Bitmap GetCoreImage(string identifier)
         {
             string nameofassembly = null;
