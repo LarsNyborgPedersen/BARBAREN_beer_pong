@@ -796,7 +796,7 @@ namespace BARBAREN_beer_pong_lib
             return name.IndexOfAny(Path.GetInvalidFileNameChars()) == -1 && name.IndexOfAny(Path.GetInvalidPathChars()) == -1;
         }
 
-        public Bitmap GetCoreImage(string identifier)
+        public BitmapImage GetCoreImage(string identifier)
         {
             string nameofassembly = null;
             foreach (string gamma in Assembly.GetExecutingAssembly().GetManifestResourceNames())
@@ -812,7 +812,15 @@ namespace BARBAREN_beer_pong_lib
             {
                 throw new Exception("Invalid name");
             }
-            return (System.Drawing.Bitmap)obx;
+            Bitmap bit =  (System.Drawing.Bitmap)obx;
+            MemoryStream ms = new MemoryStream();
+            bit.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+            BitmapImage img = new BitmapImage();
+            img.BeginInit();
+            ms.Seek(0, SeekOrigin.Begin);
+            img.StreamSource = ms;
+            img.EndInit();
+            return img;
         }
         
         //
