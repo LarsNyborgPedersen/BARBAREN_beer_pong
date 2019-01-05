@@ -19,6 +19,8 @@ namespace BARBAREN_beer_pong_lib
         //
         // period path
         private string _period;
+
+        private const string frstlne = "Teamnavn\tVundet\tTabt\tScore";
         
         public GameController()
         {
@@ -153,7 +155,7 @@ namespace BARBAREN_beer_pong_lib
             Stack<ScoreProbe> probe = new Stack<ScoreProbe>();
             foreach (string line in File.ReadLines(alpha))
             {
-                if (line.Contains("\t"))
+                if (line.Contains("\t") && !line.Equals(frstlne))
                 {
                     string[] selector = line.Split('\t');
                     probe.Push(new ScoreProbe(selector[0],int.Parse(selector[1]),int.Parse(selector[2]),int.Parse(selector[3])));
@@ -773,7 +775,10 @@ namespace BARBAREN_beer_pong_lib
             if (!PeriodExists(newname))
             {
                 Directory.CreateDirectory(GetPeriodPath(newname));
-                File.Create(GetPeriodAttributePath(newname,"scores.txt")).Close();
+                FileStream fs = File.Create(GetPeriodAttributePath(newname,"scores.txt"));
+                StreamWriter sr = new StreamWriter(fs);
+                sr.WriteLine(frstlne);
+                sr.Close();
                 Console.WriteLine("Period \"" + newname + "\" has been added to the game");
             }
             else
@@ -796,6 +801,8 @@ namespace BARBAREN_beer_pong_lib
             return name.IndexOfAny(Path.GetInvalidFileNameChars()) == -1 && name.IndexOfAny(Path.GetInvalidPathChars()) == -1;
         }
 
+#if (LARS)
+      
         public BitmapImage GetCoreImage(string identifier)
         {
             string nameofassembly = null;
@@ -821,7 +828,8 @@ namespace BARBAREN_beer_pong_lib
             img.StreamSource = ms;
             img.EndInit();
             return img;
-        }
+        }  
+#endif
         
         //
         // Checks if all directories and other dependencies are present 
