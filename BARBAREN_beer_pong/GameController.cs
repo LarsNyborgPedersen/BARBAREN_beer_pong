@@ -801,6 +801,30 @@ namespace BARBAREN_beer_pong_lib
             return name.IndexOfAny(Path.GetInvalidFileNameChars()) == -1 && name.IndexOfAny(Path.GetInvalidPathChars()) == -1;
         }
 
+        public string GetFAQ()
+        {
+            return GetCoreString("FAQ.txt");
+        }
+
+        public string GetAuthor()
+        {
+            return GetCoreString("Author.txt");
+        }
+
+        public string GetCoreString(string identifier)
+        {
+            string nameofassembly = null;
+            foreach (string gamma in Assembly.GetExecutingAssembly().GetManifestResourceNames())
+            {
+                if (gamma.EndsWith("CorePictures.resources"))
+                {
+                    nameofassembly = gamma;
+                }
+            }
+            ResourceManager rm = new ResourceManager(nameofassembly.Replace(".resources",""),Assembly.GetExecutingAssembly());
+            return rm.GetString(identifier);
+        }
+
 #if (LARS)
       
         public BitmapImage GetCoreImage(string identifier)
