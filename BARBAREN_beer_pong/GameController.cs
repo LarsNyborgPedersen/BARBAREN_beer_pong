@@ -854,6 +854,16 @@ namespace BARBAREN_beer_pong_lib
             return img;
         }  
 #endif
+
+        public string GetFAQPath()
+        {
+            return _projectpath + Path.DirectorySeparatorChar + "FAQ.txt";
+        }
+        
+        public string GetAuthorPath()
+        {
+            return _projectpath + Path.DirectorySeparatorChar + "Author.txt";
+        }
         
         //
         // Checks if all directories and other dependencies are present 
@@ -867,6 +877,16 @@ namespace BARBAREN_beer_pong_lib
                 {
                     Directory.CreateDirectory(_projectpath);
                     Console.WriteLine("Game directory created: " + Path.DirectorySeparatorChar +_projectpath+Path.DirectorySeparatorChar+"");
+                }
+
+                if (File.Exists(GetFAQPath()))
+                {
+                    File.WriteAllText(GetFAQPath(), GetFAQ());
+                }
+
+                if (File.Exists(GetAuthorPath()))
+                {
+                    File.WriteAllText(GetAuthorPath(), GetAuthor());
                 }
 
                 if (!Directory.Exists(GetImageDirectory()))
