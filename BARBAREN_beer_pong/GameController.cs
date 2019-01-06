@@ -816,7 +816,7 @@ namespace BARBAREN_beer_pong_lib
             string nameofassembly = null;
             foreach (string gamma in Assembly.GetExecutingAssembly().GetManifestResourceNames())
             {
-                if (gamma.EndsWith("CorePictures.resources"))
+                if (gamma.EndsWith("TextFiles.resources"))
                 {
                     nameofassembly = gamma;
                 }
