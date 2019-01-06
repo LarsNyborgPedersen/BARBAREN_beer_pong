@@ -730,7 +730,7 @@ namespace BARBAREN_beer_pong_lib
             Stack<string> stack = new Stack<string>();
             foreach (string sleutel in keys)
             {
-                if (sleutel!=GetImageDirectory())
+                if (sleutel!=GetImageDirectory() && sleutel!= GetFAQPath() && sleutel!= GetAuthorPath())
                 {
                     stack.Push(sleutel.Replace(GetBase() + Path.DirectorySeparatorChar, ""));
                 }
