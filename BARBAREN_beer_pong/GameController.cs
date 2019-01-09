@@ -360,7 +360,7 @@ namespace BARBAREN_beer_pong_lib
 
         public string GetWorkingTarget()
         {
-            return GetPeriodAttributePath("scores.txt");
+            return GetPeriodAttributePath("scores.csv");
         }
 
         public void ReplaceFileContext(string teamname, string context)
@@ -380,7 +380,7 @@ namespace BARBAREN_beer_pong_lib
                     stack.Push(context);
                     isadded = false;
                 }
-                else
+                else if(!line.Equals(frstlne))
                 {
                     stack.Push(line);
                 }
@@ -390,6 +390,8 @@ namespace BARBAREN_beer_pong_lib
             {
                 stack.Push(context);
             }
+            stack.Push(frstlne);
+            
             StreamWriter writer = File.CreateText(targetfile);
             foreach (string line in stack)
             {
@@ -775,7 +777,7 @@ namespace BARBAREN_beer_pong_lib
             if (!PeriodExists(newname))
             {
                 Directory.CreateDirectory(GetPeriodPath(newname));
-                FileStream fs = File.Create(GetPeriodAttributePath(newname,"scores.txt"));
+                FileStream fs = File.Create(GetPeriodAttributePath(newname,"scores.csv"));
                 StreamWriter sr = new StreamWriter(fs);
                 sr.WriteLine(frstlne);
                 sr.Close();
