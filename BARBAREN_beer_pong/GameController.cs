@@ -872,7 +872,7 @@ namespace BARBAREN_beer_pong_lib
             String pathToDesktop = AppDomain.CurrentDomain.BaseDirectory;//Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             if (Directory.Exists(pathToDesktop))
             {
-                _projectpath = pathToDesktop + Path.DirectorySeparatorChar + "BarbarenBeerPong";
+                _projectpath = pathToDesktop + Path.DirectorySeparatorChar + "Barbaren beer pong - Gemt Data";
                 if (!Directory.Exists(_projectpath))
                 {
                     Directory.CreateDirectory(_projectpath);
