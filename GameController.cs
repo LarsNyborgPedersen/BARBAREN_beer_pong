@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
+using System.Windows.Media.Imaging;
 
 namespace BARBAREN_beer_pong_lib
 {
