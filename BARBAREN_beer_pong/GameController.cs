@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
+using System.Text;
 
 namespace BARBAREN_beer_pong_lib
 {
@@ -858,7 +859,9 @@ namespace BARBAREN_beer_pong_lib
                 return identifier;
             }
             ResourceManager rm = new ResourceManager(nameofassembly.Replace(".resources",""),Assembly.GetExecutingAssembly());
-            return rm.GetString(identifier);
+            UnmanagedMemoryStream ums = rm.GetStream(identifier);
+            StreamReader rd = new StreamReader(ums);
+            return rd.ReadToEnd();
         }
 
 #if (LARS)
