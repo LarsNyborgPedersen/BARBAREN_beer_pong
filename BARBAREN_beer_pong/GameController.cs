@@ -835,12 +835,12 @@ namespace BARBAREN_beer_pong_lib
 
         public string GetFAQ()
         {
-            return GetCoreString("FAQ.txt");
+            return GetCoreString("FAQ");
         }
 
         public string GetAuthor()
         {
-            return GetCoreString("Author.txt");
+            return GetCoreString("Author");
         }
 
         public string GetCoreString(string identifier)
