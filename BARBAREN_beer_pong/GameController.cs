@@ -20,7 +20,7 @@ namespace BARBAREN_beer_pong_lib
         // period path
         private string _period;
 
-        private const string frstlne = "Teamnavn\tVundet\tTabt\tScore";
+        private const string frstlne = "Teamnavn\t\t\t\tVundet\tTabt\tScore";
         
         public GameController()
         {
@@ -158,7 +158,7 @@ namespace BARBAREN_beer_pong_lib
                 if (line.Contains("\t") && !line.Equals(frstlne))
                 {
                     string[] selector = line.Split('\t');
-                    probe.Push(new ScoreProbe(selector[0],int.Parse(selector[1]),int.Parse(selector[2]),int.Parse(selector[3])));
+                    probe.Push(new ScoreProbe(selector[0],int.Parse(selector[selector.Length-3]),int.Parse(selector[selector.Length-2]),int.Parse(selector[selector.Length-1])));
                 }
             }
             
@@ -360,7 +360,36 @@ namespace BARBAREN_beer_pong_lib
 
         public string GetWorkingTarget()
         {
-            return GetPeriodAttributePath("scores.csv");
+            return GetPeriodAttributePath("scores.txt");
+        }
+
+        public string Refactor(string a)
+        {
+            string generatedcontext = "";
+            int stdcontext = 5 * 8;
+            string[] X = a.Split('\t');
+            string A = X[X.Length - 3];
+            string B = X[X.Length - 2];
+            string C = X[X.Length - 1];
+            string D = X[0];
+            int lex = stdcontext - D.Length;
+            double U = (double)((double)lex / (double)8);
+            if ((int) U == U)
+            {
+                lex = (int) U;
+            }
+            else
+            {
+                lex = ((int) U) + 1;
+            }
+            generatedcontext = D;
+            for (int i = 0; i < lex; i++)
+            {
+                generatedcontext += "\t";
+            }
+
+            generatedcontext += A + "\t" + B + "\t" + C;
+            return generatedcontext;
         }
 
         public void ReplaceFileContext(string teamname, string context)
@@ -377,18 +406,18 @@ namespace BARBAREN_beer_pong_lib
             {
                 if (line.StartsWith(teamname + "\t"))
                 {
-                    stack.Push(context);
+                    stack.Push(Refactor(context));
                     isadded = false;
                 }
                 else if(!line.Equals(frstlne))
                 {
-                    stack.Push(line);
+                    stack.Push(Refactor(line));
                 }
             }
 
             if (isadded)
             {
-                stack.Push(context);
+                stack.Push(Refactor(context));
             }
             stack.Push(frstlne);
             
@@ -416,7 +445,8 @@ namespace BARBAREN_beer_pong_lib
             }
 
             string[] tokens = target.Split('\t');
-            return tokens;
+            string[] result = new string[]{tokens[0],tokens[tokens.Length-3],tokens[tokens.Length-2],tokens[tokens.Length-1]};
+            return result;
         }
         
 
@@ -472,8 +502,7 @@ namespace BARBAREN_beer_pong_lib
         public int GetScore(string teamname)
         {
             return int.Parse(GetScoreTagOf(teamname)[3]);
-        }
-        
+        }        
         //
         // TEAM
         //
@@ -777,7 +806,7 @@ namespace BARBAREN_beer_pong_lib
             if (!PeriodExists(newname))
             {
                 Directory.CreateDirectory(GetPeriodPath(newname));
-                FileStream fs = File.Create(GetPeriodAttributePath(newname,"scores.csv"));
+                FileStream fs = File.Create(GetPeriodAttributePath(newname,"scores.txt"));
                 StreamWriter sr = new StreamWriter(fs);
                 sr.WriteLine(frstlne);
                 sr.Close();
@@ -822,6 +851,11 @@ namespace BARBAREN_beer_pong_lib
                 {
                     nameofassembly = gamma;
                 }
+            }
+
+            if (nameofassembly == null)
+            {
+                return identifier;
             }
             ResourceManager rm = new ResourceManager(nameofassembly.Replace(".resources",""),Assembly.GetExecutingAssembly());
             return rm.GetString(identifier);
@@ -881,12 +915,12 @@ namespace BARBAREN_beer_pong_lib
                     Console.WriteLine("Game directory created: " + Path.DirectorySeparatorChar +_projectpath+Path.DirectorySeparatorChar+"");
                 }
 
-                if (File.Exists(GetFAQPath()))
+                if (!File.Exists(GetFAQPath()))
                 {
                     File.WriteAllText(GetFAQPath(), GetFAQ());
                 }
 
-                if (File.Exists(GetAuthorPath()))
+                if (!File.Exists(GetAuthorPath()))
                 {
                     File.WriteAllText(GetAuthorPath(), GetAuthor());
                 }
