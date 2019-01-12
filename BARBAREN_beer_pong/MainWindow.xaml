@@ -47,9 +47,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Image Source="Images/backButton.png" x:Name="backButton" Grid.Column="0" MouseDown="Back_Button_Clicked" />
+                <Image x:Name="backButton" Margin="20" Grid.Column="0" MouseDown="Back_Button_Clicked" MouseEnter="BackButton_MouseEnter" MouseLeave="BackButton_MouseLeave"/>
 
-                <Image Source="Images/logo2.png" Grid.Column="1" Margin="0, 0, 0, 6"/>
+                <Image x:Name="logo" Grid.Column="1" Margin="0, 0, 0, 6"/>
+                <Image x:Name="FAQButton" Grid.Column="2" Margin="20" MouseDown="FAQButton_MouseDown" RenderTransformOrigin="0.663,0.5" MouseEnter="FAQButton_MouseEnter" MouseLeave="FAQButton_MouseLeave"/>
             </Grid>
 
             <ContentControl Grid.Row="1" Content="{Binding}"/>

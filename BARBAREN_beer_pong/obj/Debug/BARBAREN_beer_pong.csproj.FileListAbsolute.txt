@@ -1,8 +1,10 @@
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\bin\Debug\BARBAREN_beer_pong.exe.config
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\bin\Debug\BARBAREN_beer_pong.exe
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\bin\Debug\BARBAREN_beer_pong.pdb
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.csprojAssemblyReference.cache
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\MainWindow.g.cs
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\RankWindow.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\AddScore.g.cs
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\AddScoreWhichTeam.g.cs
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\AddTeam.g.cs
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\chooseSemester.g.cs
@@ -14,6 +16,7 @@ C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong_MarkupCompile.lref
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\MainWindow.baml
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\RankWindow.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\AddScore.baml
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\AddScoreWhichTeam.baml
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\AddTeam.baml
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\chooseSemester.baml
@@ -21,11 +24,14 @@ C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\MainMenu.baml
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.g.resources
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.Properties.Resources.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.RandomPictures.resources
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.csproj.GenerateResource.cache
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.csproj.CoreCompileInputs.cache
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.exe
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.pdb
-C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\AddScore.g.cs
-C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\Views\AddScore.baml
-C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.RandomPictures.resources
-C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.csprojAssemblyReference.cache
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\ErrorMessage.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\ErrorMessage.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.CorePictures.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\FAQ.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\FAQ.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Debug\BARBAREN_beer_pong.TextFiles.resources

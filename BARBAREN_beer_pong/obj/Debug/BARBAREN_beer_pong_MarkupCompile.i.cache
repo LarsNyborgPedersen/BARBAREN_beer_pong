@@ -8,13 +8,13 @@ C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_
 BARBAREN_beer_pong
 none
 false
-DEBUG;TRACE
+TRACE;DEBUG;LARS
 C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\App.xaml
-891731710
+10696431956
 
-251356262729
+29-2119809884
 14434534373
-MainWindow.xaml;RankWindow.xaml;Views\AddScore.xaml;Views\AddScoreWhichTeam.xaml;Views\AddTeam.xaml;Views\chooseSemester.xaml;Views\CreateSemester.xaml;Views\MainMenu.xaml;
+ErrorMessage.xaml;FAQ.xaml;MainWindow.xaml;RankWindow.xaml;Views\AddScore.xaml;Views\AddScoreWhichTeam.xaml;Views\AddTeam.xaml;Views\chooseSemester.xaml;Views\CreateSemester.xaml;Views\MainMenu.xaml;
 
 False
 
