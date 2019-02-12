@@ -284,10 +284,13 @@
     <None Include="Images\FAQ2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Author.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\FAQ.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Author.txt" />
+    <None Include="Resources\BeerPongRanking.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

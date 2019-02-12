@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BARBAREN_beer_pong_lib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,8 +23,7 @@ namespace BARBAREN_beer_pong
         public FAQ()
         {
             InitializeComponent();
-            this.FAQText.Text = "Hey motherfucker \n this is newline.. " +
-                "and this is not.";
+            this.FAQText.Text = GameController.GetInstance().GetFAQ();
 
         }
     }

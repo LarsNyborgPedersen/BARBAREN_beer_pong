@@ -6,10 +6,15 @@
         xmlns:local="clr-namespace:BARBAREN_beer_pong"
         mc:Ignorable="d"
         Title="FAQ" Height="450" Width="800">
-    <StackPanel>
-        <TextBlock Text="FAQ (Oftest stillede spørgsmål)" HorizontalAlignment="Center" FontSize="50" FontWeight="Bold"/>
-        <ScrollViewer>
-            <TextBlock x:Name="FAQText" FontSize="20"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="FAQ (Oftest stillede spørgsmål)" Grid.Row="0" HorizontalAlignment="Center" FontSize="50" FontWeight="Bold"/>
+
+        <ScrollViewer VerticalScrollBarVisibility="Visible" Grid.Row="1">
+            <TextBlock x:Name="FAQText"  FontSize="20"/>
         </ScrollViewer>
-    </StackPanel>
+    </Grid>
 </Window>

@@ -1,0 +1,36 @@
+Hvordan ændre jeg navnet på et team? 
+1 Gå ind i mappen "Barbaren beer pong - Gemt Data".
+2 Gå ind i mappen for det aktuelle semester, hvor teamet er oprettet.
+3 Find mappen med holdets nuværende navn og ændre det til det nye navn.
+4 I samme mappe (mappen for det aktuelle semester) er der også en fil kaldet "Scores.txt" hvori holdets nuværende navn skal findes, og ændres til det nye navn.
+
+
+Hvordan sletter jeg et semester?
+1 Gå ind i mappen "Barbaren beer pong - Gemt Data".
+2 Find mappen med navnet på det semester du vil slette og slet mappen.
+
+
+Hvordan sletter jeg et team?
+1 Gå ind i mappen "Barbaren beer pong - Gemt Data".
+2 Find mappen med navnet på det semester, hvori der er et team du vil slette.
+3 Find mappen med navnet på det team du vil slette, og slet den mappe.
+
+
+Hvordan laver jeg "Beer pong Ranking" til fuld skærm? 
+1 Tryk på vinduet med "Beer pong Ranking" 
+2 Tryk F11 eller windows knappen + F11
+
+
+Hvordan ændre jeg et teams billed?
+1 Tryk tilføj team
+2 Skriv præcist bogstav for bogstav navnet på det team du vil give et nyt billed
+3 IKKE tilføj medlem navne igen
+4 Tilføj det nye billed
+5 Tryk "Færdig".
+
+
+1 Sørg for at det nye team billed hedder "team" og er af filtypen ".jpg", så det fulde navn er "team.jpg".
+2 Gå ind i mappen "Barbaren beer pong - Gemt Data".
+3 Find mappen med navnet på det semester, hvori der er et team du vil give et nyt billed.
+4 Gå ind i mappen med navnet på det team du vil give et nyt billed.
+5 Kopier det nye team billed "team.jpg" ind i mappen, så den erstatter det billed der allerede er i mappen.

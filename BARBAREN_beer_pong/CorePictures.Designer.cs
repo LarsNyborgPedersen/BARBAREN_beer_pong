@@ -83,6 +83,16 @@ namespace BARBAREN_beer_pong {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BeerPongRanking {
+            get {
+                object obj = ResourceManager.GetObject("BeerPongRanking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FAQ {
             get {
                 object obj = ResourceManager.GetObject("FAQ", resourceCulture);
