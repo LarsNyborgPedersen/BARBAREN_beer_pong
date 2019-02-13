@@ -1,2 +1,4 @@
 Teamnavn				Vundet	Tabt	Score
 1					8	0	8
+Klassebilled				8	0	8
+own pc					7	0	7
