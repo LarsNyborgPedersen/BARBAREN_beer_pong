@@ -1,0 +1,74 @@
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\bin\Release\BARBAREN_beer_pong.exe.config
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\bin\Release\BARBAREN_beer_pong.exe
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\bin\Release\BARBAREN_beer_pong.pdb
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.csprojAssemblyReference.cache
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\MainWindow.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\RankWindow.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\AddScore.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\AddScoreWhichTeam.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\AddTeam.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\chooseSemester.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\CreateSemester.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\MainMenu.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\App.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong_MarkupCompile.cache
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong_MarkupCompile.lref
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\MainWindow.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\RankWindow.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\AddScore.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\AddScoreWhichTeam.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\AddTeam.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\chooseSemester.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\CreateSemester.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\Views\MainMenu.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.g.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.Properties.Resources.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.RandomPictures.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.csproj.GenerateResource.cache
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.csproj.CoreCompileInputs.cache
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.exe
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.pdb
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\ErrorMessage.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\ErrorMessage.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\FAQ.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\FAQ.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.CorePictures.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.TextFiles.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\bin\Release\BARBAREN_beer_pong.exe.config
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\bin\Release\BARBAREN_beer_pong.exe
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\bin\Release\BARBAREN_beer_pong.pdb
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.csprojAssemblyReference.cache
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\ErrorMessage.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\FAQ.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\MainWindow.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\RankWindow.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\AddScore.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\AddScoreWhichTeam.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\AddTeam.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\chooseSemester.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\CreateSemester.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\MainMenu.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\App.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong_MarkupCompile.cache
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong_MarkupCompile.lref
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\ErrorMessage.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\FAQ.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\MainWindow.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\RankWindow.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\AddScore.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\AddScoreWhichTeam.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\AddTeam.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\chooseSemester.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\CreateSemester.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\Views\MainMenu.baml
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.g.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.CorePictures.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.Properties.Resources.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.RandomPictures.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.TextFiles.resources
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.csproj.GenerateResource.cache
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.csproj.CoreCompileInputs.cache
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.exe
+C:\EksternHarddisk\Programmering\Visual Studio\BARBAREN_beer_pong - Kopi\BARBAREN_beer_pong\obj\Release\BARBAREN_beer_pong.pdb
